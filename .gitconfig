@@ -1,0 +1,13 @@
+[user]
+	name = Tom Viehrig
+	email = tc-et2@adensis.com
+[core]
+	editor = vim
+	autocrlf = false
+	whitespace = trailing-space,space-before-tab,tab-in-indent
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[alias]
+	olog = log --graph --decorate --branches --tags --remotes --oneline
