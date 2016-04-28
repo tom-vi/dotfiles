@@ -1,13 +1,19 @@
 [user]
 	name = Tom Viehrig
-	email = tc-et2@adensis.com
+	email = tom@tomviehrig.de
 [core]
 	editor = vim
-	autocrlf = false
 	whitespace = trailing-space,space-before-tab,tab-in-indent
+[alias]
+    lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    olog = log --graph --all --pretty=format:\"%Cred%h%Creset %s %C(auto)%d \" --graph --abbrev-commit
 [merge]
 	tool = vimdiff
 [color]
 	ui = true
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
 [alias]
 	olog = log --graph --decorate --branches --tags --remotes --oneline

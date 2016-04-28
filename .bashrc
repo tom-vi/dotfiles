@@ -113,9 +113,6 @@
 # alias ll='ls -l'                              # long list
 # alias la='ls -A'                              # all but . and ..
 # alias l='ls -CF'                              #
-alias olog='git olog'
-alias nibbler='ssh ehz@10.9.3.85'
-alias zoidberg="ssh ehz@zoidberg"
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
@@ -124,12 +121,9 @@ alias zoidberg="ssh ehz@zoidberg"
 # Paranoid: neither group nor others have any perms:
 # umask 077
 
-# Functions
-#
-# Some people use a different file for functions
-# if [ -f "${HOME}/.bash_functions" ]; then
-#   source "${HOME}/.bash_functions"
-# fi
+if [ -f "${HOME}/.bash_aliases" ]; then
+    source "${HOME}/.bash_aliases"
+fi
 #
 # Some example functions:
 #
@@ -198,10 +192,25 @@ alias zoidberg="ssh ehz@zoidberg"
 # }
 # 
 # alias cd=cd_func
-cd /cygdrive/c/Entwicklung/ehf
 
 # Git branch in der Komandozeile anzeigen
 source ~/.git-prompt.sh
 
+#####################
+### Git in prompt ###
+#####################
+# Show clean/dirty state for Git in prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# Change prompt
+PS1_OLD=${PS1}
+
+#export PS1='\[\033[0;34m\]\u@\h\[\033[0m\]:\[\033[1;35m\]\W\[\033[0m\] \[\033[1;92m\]$(__git_ps1 "(%s)")\[\033[0m\]$ '
 export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]$(__git_ps1 ' (%s)')\n\$"
 
+
+
+# QSYS
+export QSYS_ROOTDIR="/media/t1m1/datax/altera/quartus_ins/quartus/sopc_builder/bin"
+
+export ALTERAOCLSDKROOT="/media/t1m1/datax/altera/quartus_ins/hld"

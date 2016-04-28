@@ -9,11 +9,15 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on	
+syntax on
+
+set smartindent
 
 set mouse=a
 
 set tabstop=4 
+
+set expandtab
 
 set number	"zeilennummer
 
@@ -22,6 +26,14 @@ set ruler	"zeilen und zeichen nummer unten rechts
 set backspace=eol,start,indent	"damit backspace so funktioniert wie sonst
 
 set magic	"für regex
+
+set showcmd "show partial cmd
+
+set incsearch   "show while typing
+
+set wildmenu    "show possibilities while typeing
+
+set autoread    "read if file is changed outside
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
