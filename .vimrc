@@ -11,13 +11,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 
-set smartindent
-
 set mouse=a
-
-set tabstop=4 
-
-set expandtab
 
 set number	"zeilennummer
 
@@ -70,3 +64,13 @@ set softtabstop=4
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+
+" Alternatives to ESC:
+imap jkl <ESC>
+"imap jlk <ESC>
+"imap kjl <ESC>
+"imap klj <ESC>
+imap lkj <ESC>
+"imap ljk <ESC>
+"imap ;l <ESC>

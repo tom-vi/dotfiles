@@ -13,6 +13,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# cleanup screen
+alias cls='echo -ne "\033c"'
 
 # programming
 alias makeit="make |& grep --color -E 'warning|$'"
@@ -23,6 +25,7 @@ alias htwvpn3="sudo vpnc ~/Dokumente/VPN_DATEIEN/HTW_Internet_3.conf"
 alias htwsamba="sudo mount -t cifs //samba.htw-dresden.de/s69377 ~/HTW -o user=s69377"
 
 # git
+alias g="git"
 alias olog='git olog'
 alias gst='git status'
 alias gco='git checkout'
